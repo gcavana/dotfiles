@@ -1,0 +1,32 @@
+{
+	"always_show_minimap_viewport": true,
+	"atomic_save": false,
+	"bold_folder_labels": true,
+	"caret_extra_bottom": 2,
+	"caret_extra_top": 2,
+	"caret_extra_width": 10,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Theme - Cyanide/Monocyanide - Contrasted Semi.tmTheme",
+	"draw_white_space": "all",
+	"enable_tab_scrolling": false,
+	"ensure_newline_at_eof_on_save": true,
+	"font_face": "Monaco",
+	"font_size": 16,
+	"highlight_line": true,
+	"icon_file_type_enable": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"overlay_scroll_bars": "enabled",
+	"rulers":
+	[
+		80,
+		120
+	],
+	"theme": "Cyanide.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}

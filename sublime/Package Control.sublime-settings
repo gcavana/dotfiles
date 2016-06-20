@@ -1,0 +1,32 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"Behat",
+		"Colorsublime",
+		"DashDoc",
+		"DocBlockr",
+		"Doctrine Snippets",
+		"Git",
+		"GitGutter",
+		"GoSublime",
+		"Monokai - Spacegray",
+		"Package Control",
+		"PHP Companion",
+		"PHP-Twig",
+		"PHPUnit Completions",
+		"PlainTasks",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-contrib-twiglint",
+		"SublimeLinter-phpcs",
+		"Theme - Cyanide",
+		"TrailingSpaces"
+	]
+}

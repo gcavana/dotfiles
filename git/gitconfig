@@ -1,0 +1,28 @@
+[alias]
+    ci   = commit
+    di   = diff
+    sdi  = diff --staged
+    sdiff = diff --staged
+    st   = status
+    sta  = stash
+    br   = branch
+    co   = checkout
+    cat  = cat-file -p
+    lg   = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset%s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+[user]
+	name = eljam
+	email = guillaume.cavana@gmail.com
+[http]
+	sslverify = false
+[core]
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = ~/.gitignore_global
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

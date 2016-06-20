@@ -1,0 +1,46 @@
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+alias x="exit"
+
+alias ls='ls -aFhlG'
+#alias ll='ls -l'
+alias mkdir='mkdir -pv'
+alias df='df -H'
+alias du='du -ch'
+alias mount='mount | column -t'
+
+alias f='open -a Finder '
+alias workspace='cd ~/workspace'
+alias docs='cd ~/Documents'
+alias dl='cd ~/Downloads'
+alias safari="open -a safari"
+alias firefox="open -a firefox"
+alias chrome="open -a google\ chrome"
+alias subl="open -a Sublime\ Text"
+
+alias h='history'
+alias j='jobs -l'
+
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+alias sha1='openssl sha1'
+
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +"%T'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+
+alias flushdnscache='sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed'
+alias ping='ping -c 5'
+alias wget='wget -c'
+
+alias battery='ioreg -w0 -l | grep Capacity | cut -d " " -f 17-50'
+alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> SSH public key copied to pasteboard.'"
+
+alias hcode="pbpaste | highlight --font Menlo --line-numbers --syntax=php -O rtf | pbcopy"
+alias sfconsole="docker-compose exec php php app/console"

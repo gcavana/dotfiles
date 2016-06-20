@@ -1,0 +1,7 @@
+[
+  { "keys": ["f9"], "command": "expand_fqcn" },
+  { "keys": ["alt+shift+u"], "command": "expand_fqcn", "args": {"leading_separator": true} },
+  { "keys": ["alt+shift+f"], "command": "find_use" },
+  { "keys": ["alt+shift+i"], "command": "import_namespace" },
+  { "keys": ["alt+shift+g"], "command": "goto_definition_scope" }
+]
