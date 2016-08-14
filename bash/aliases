@@ -44,3 +44,7 @@ alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> SSH public key copied to
 
 alias hcode="pbpaste | highlight --font Menlo --line-numbers --syntax=php -O rtf | pbcopy"
 alias sfconsole="docker-compose exec php php app/console"
+
+alias vim=$(which nvim)
+alias vi=$(which nvim)
+

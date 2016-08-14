@@ -24,14 +24,17 @@ brew install pdsh
 brew install htop-osx
 brew tap thoughtbot/formulae
 
+echo -e "\033[33m\n✔\033[33m Installing Neovim Env...\033[0m\n"
+brew install neovim/neovim/neovim
+
 echo -e "\033[33m\n✔\033[33m Installing PHP Env...\033[0m\n"
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 brew tap homebrew/php
-brew install php56
-brew install php56-xdebug
-brew install php56-mcrypt
-brew install php56-symfony-debug
+brew install php70
+brew install php70-xdebug
+brew install php70-mcrypt
+brew install php70-symfony-debug
 brew install composer
 
 echo -e "\033[33m\n✔\033[33m Installing Python Env...\033[0m\n"

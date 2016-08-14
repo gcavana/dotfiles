@@ -23,5 +23,8 @@ export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 export PYENV_ROOT=/usr/local/var/pyenv
 export GOPATH="$HOME/workspace/goprojects"
 export PATH="$PATH:$GOPATH/bin"
+
+export EDITOR='nvim'
+
 #Tmuxinator
 export DISABLE_AUTO_TITLE=true
