@@ -12,15 +12,12 @@ fi
 
 # Path
 export PATH="/usr/local/bin:$PATH"
-export PATH="$PYENV_ROOT/shims:$PATH"
-export PATH="$(brew --prefix php56)/bin:$PATH"
+export PATH="$(brew --prefix php70)/bin:$PATH"
 export PATH="/usr/local/opt/go/libexec/bin:$PATH"
-export PATH="$NVM_PATH:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
-export PYENV_ROOT=/usr/local/var/pyenv
 export GOPATH="$HOME/workspace/goprojects"
 export PATH="$PATH:$GOPATH/bin"
 

@@ -24,9 +24,6 @@ brew install pdsh
 brew install htop-osx
 brew tap thoughtbot/formulae
 
-echo -e "\033[33m\n✔\033[33m Installing Neovim Env...\033[0m\n"
-brew install neovim/neovim/neovim
-
 echo -e "\033[33m\n✔\033[33m Installing PHP Env...\033[0m\n"
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
@@ -39,7 +36,6 @@ brew install composer
 
 echo -e "\033[33m\n✔\033[33m Installing Python Env...\033[0m\n"
 brew install python
-pip install powerline-status
 
 echo -e "\033[33m\n✔\033[33m Installing Tmux...\033[0m\n"
 brew install tmux
@@ -48,11 +44,11 @@ brew install tmux-mem-cpu-load
 echo -e "\033[33m\n✔\033[33m Installing Mix Package...\033[0m\n"
 # Install everything else
 brew install ssh-copy-id
-brew install vim
 brew install highlight
-echo -e "\033[33m\n✔\033[33m Installing NPM Package...\033[0m\n"
-#npm
-brew install nvm
+
+echo -e "\033[33m\n✔\033[33m Installing NVM Package...\033[0m\n"
+#nvm
+brew install node
 
 echo -e "\033[33m\n✔\033[33m Installing Docker Package...\033[0m\n"
 #docker
@@ -62,6 +58,9 @@ brew install docker-compose
 brew install docker-machine-driver-xhyve
 brew install docker-machine-nfs
 brew install xhyve
+
+echo -e "\033[33m\n✔\033[33m Installing Neovim Env...\033[0m\n"
+brew install neovim/neovim/neovim
 
 echo -e "\033[33m\n✔\033[33m Installing Cask...\033[0m\n"
 brew tap phinze/cask

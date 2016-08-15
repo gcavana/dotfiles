@@ -12,15 +12,6 @@ fi
 
 # Customize to your needs...
 
-# NodeJs
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
-
-# pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
-# pyenv virtualenv
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 # Aliases
 source ~/.aliases
 
