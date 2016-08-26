@@ -22,6 +22,5 @@ export GOPATH="$HOME/workspace/goprojects"
 export PATH="$PATH:$GOPATH/bin"
 
 export EDITOR='nvim'
-
 #Tmuxinator
 export DISABLE_AUTO_TITLE=true

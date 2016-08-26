@@ -30,9 +30,8 @@ set nostartofline       " Do not jump to first character with page commands.
 
 " fileformat stuff
 "set fileformats=unix
-"set encoding=utf-8
-"set fileencodings=utf-8
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h14
+set encoding=utf-8
+set fileencodings=utf-8
 
 let mapleader="," " leader
-
-
