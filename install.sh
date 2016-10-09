@@ -10,7 +10,8 @@ install() {
 }
 
 echo -e "\033[33m\n✔\033[33m Installing Zsh...\033[0m\n"
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 echo -e "\033[33m\n✔\033[33m Setting Zsh...\033[0m\n"
 chsh -s /bin/zsh
 
@@ -18,7 +19,6 @@ echo -e "\033[33m\n✔\033[33m Installing/Updating dotfiles...\033[0m\n"
 
 if [ ! -e $dotfiles/.git ]; then
 echo -e "\033[33m\n✔\033[33m Cloning dotfiles...\033[0m\n"
-  git config --global http.verify false
   git clone https://github.com/eljam/dotfiles.git $dotfiles
 else
 echo -e "\033[33m\n✔\033[33m Updating dotfiles...\033[0m\n"
@@ -35,10 +35,6 @@ fi
 install $dotfiles/bash/aliases $HOME/.aliases
 install $dotfiles/zsh/zshrc $HOME/.zshrc
 install $dotfiles/zsh/zshenv $HOME/.zshenv
-install $dotfiles/zsh/zlogin $HOME/.zlogin
-install $dotfiles/zsh/zlogout $HOME/.zlogout
-install $dotfiles/zsh/zpreztorc $HOME/.zpreztorc
-install $dotfiles/zsh/zprofile $HOME/.zprofile
 install $dotfiles/tmux/.tmux.conf $HOME/.tmux.conf
 install $dotfiles/nvim/init.vim $HOME/.config/nvim/init.vim
 install $dotfiles/nvim/config.vim $HOME/.config/nvim/config.vim

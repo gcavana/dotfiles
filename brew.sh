@@ -37,6 +37,9 @@ brew install composer
 echo -e "\033[33m\n✔\033[33m Installing Python Env...\033[0m\n"
 brew install python
 
+echo -e "\033[33m\n✔\033[33m Installing Rbenv Env...\033[0m\n"
+brew install rbenv
+
 echo -e "\033[33m\n✔\033[33m Installing Tmux...\033[0m\n"
 brew install tmux
 brew install tmux-mem-cpu-load
@@ -60,6 +63,7 @@ brew install docker-machine-nfs
 brew install xhyve
 
 echo -e "\033[33m\n✔\033[33m Installing Neovim Env...\033[0m\n"
+brew install fzf
 brew install neovim/neovim/neovim
 
 echo -e "\033[33m\n✔\033[33m Installing Cask...\033[0m\n"
