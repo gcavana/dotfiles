@@ -1,16 +1,27 @@
 #!/usr/bin/env bash
 
+print_info() {
+  printf "\n\e[0;35m $1\e[0m\n\n"
+}
+
+print_success() {
+  printf "\e[0;32m  [✔] $1\e[0m\n"
+}
+
 if ! type "brew" > /dev/null; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-echo -e "\033[33m\n✔\033[33m Updating and upgrading Brew...\033[0m\n"
+print_success "Updating and upgrading Brew"
+brew tap homebrew/versions
+brew tap homebrew/dupes
+
 # Make sure we’re using the latest Homebrew
 brew update
 # Upgrade any already-installed formulae
-brew upgrade
+brew upgrade --all
 
-echo "\033[33m\n✔\033[33m Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH.\033[0m\n"
+print_success "Insall utils"
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 brew install bash
@@ -24,8 +35,7 @@ brew install pdsh
 brew install htop-osx
 brew tap thoughtbot/formulae
 
-echo -e "\033[33m\n✔\033[33m Installing PHP Env...\033[0m\n"
-brew tap homebrew/dupes
+print_success "Installing PHP Env"
 brew install homebrew/dupes/grep
 brew tap homebrew/php
 brew install php70
@@ -34,26 +44,26 @@ brew install php70-mcrypt
 brew install php70-symfony-debug
 brew install composer
 
-echo -e "\033[33m\n✔\033[33m Installing Python Env...\033[0m\n"
+print_success "Installing Python Env"
 brew install python
 
-echo -e "\033[33m\n✔\033[33m Installing Rbenv Env...\033[0m\n"
+print_success "Installing Rbenv Env"
 brew install rbenv
 
-echo -e "\033[33m\n✔\033[33m Installing Tmux...\033[0m\n"
+print_success "Installing Tmux"
 brew install tmux
 brew install tmux-mem-cpu-load
 
-echo -e "\033[33m\n✔\033[33m Installing Mix Package...\033[0m\n"
+print_success "Installing Mix Package"
 # Install everything else
 brew install ssh-copy-id
 brew install highlight
 
-echo -e "\033[33m\n✔\033[33m Installing NVM Package...\033[0m\n"
+print_success "Installing NVM Package"
 #nvm
 brew install node
 
-echo -e "\033[33m\n✔\033[33m Installing Docker Package...\033[0m\n"
+print_success "Installing Docker Package"
 #docker
 brew install docker
 brew install docker-machine
@@ -62,16 +72,19 @@ brew install docker-machine-driver-xhyve
 brew install docker-machine-nfs
 brew install xhyve
 
-echo -e "\033[33m\n✔\033[33m Installing Neovim Env...\033[0m\n"
+print_success "Installing Neovim Env"
+
 brew install fzf
 brew install neovim/neovim/neovim
 
-echo -e "\033[33m\n✔\033[33m Installing Cask...\033[0m\n"
-brew tap phinze/cask
+print_success "Installing Cask"
+
+brew tap caskroom/cask
 brew install brew-cask
 
-echo -e "\033[33m\n✔\033[33m Installing Cask App...\033[0m\n"
+print_success "Installing Cask App"
 brew tap caskroom/versions
+
 brew cask install cleanmymac2
 brew cask install forklift
 brew cask install google-chrome
@@ -88,6 +101,6 @@ brew cask install iterm2
 brew cask install beamer
 brew cask install sublime-text
 
-echo -e "\033[33m\n✔\033[33m Cleaning...\033[0m\n"
+print_success "Cleaning"
 # Remove outdated versions from the cellar
 brew cleanup

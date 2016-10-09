@@ -7,29 +7,41 @@ install() {
     rm -rf $2
   fi
   ln -nfs $1 $2
+  print_success "$1 → $2"
 }
 
-echo -e "\033[33m\n✔\033[33m Installing Zsh...\033[0m\n"
+print_info() {
+  printf "\n\e[0;35m $1\e[0m\n\n"
+}
+
+print_success() {
+  printf "\e[0;32m  [✔] $1\e[0m\n"
+}
+
+print_info "Installing Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-echo -e "\033[33m\n✔\033[33m Setting Zsh...\033[0m\n"
+print_info "Installing Zsh Themes"
+curl "https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm/master/honukai.zsh-theme" -o ~/.oh-my-zsh/themes/honukai.zsh-theme
+
+print_info "Setting Zsh"
 chsh -s /bin/zsh
 
-echo -e "\033[33m\n✔\033[33m Installing/Updating dotfiles...\033[0m\n"
+print_info "Installing/Updating dotfiles"
 
 if [ ! -e $dotfiles/.git ]; then
-echo -e "\033[33m\n✔\033[33m Cloning dotfiles...\033[0m\n"
+  print_info "Cloning dotfiles"
   git clone https://github.com/eljam/dotfiles.git $dotfiles
 else
-echo -e "\033[33m\n✔\033[33m Updating dotfiles...\033[0m\n"
+  print_info "Updating dotfiles"
   cd $dotfiles && git pull
 fi
 
-echo -e "\033[33m\n✔\033[33m Setting up aliases...\033[0m\n"
+print_info "Setting up aliases"
 
 if [ ! -e $HOME/.config ]; then
-echo -e "\033[33m\n✔\033[33m Create config dir for nvim...\033[0m\n"
-mkdir -p $HOME/.config
+  print_info "Create config dir for nvim"
+  mkdir -p $HOME/.config
 fi
 
 install $dotfiles/bash/aliases $HOME/.aliases
@@ -41,5 +53,10 @@ install $dotfiles/nvim/config.vim $HOME/.config/nvim/config.vim
 install $dotfiles/nvim/keys.vim $HOME/.config/nvim/keys.vim
 install $dotfiles/nvim/plugins.vim $HOME/.config/nvim/plugins.vim
 
-echo -e "\033[33m\n✔\033[33m Setting up dev tools...\033[0m\n"
+print_info "Setting up dev tools"
 install $dotfiles/git/gitconfig $HOME/.gitconfig
+cp $dotfiles/git/gitconfig.local $HOME/.gitconfig.local
+
+print_info "Add iterm colors"
+open "${dotfiles}/iterm/themes/honukai.itermcolors"
+
