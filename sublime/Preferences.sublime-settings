@@ -6,7 +6,7 @@
 	"caret_extra_top": 2,
 	"caret_extra_width": 10,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Theme - Cyanide/Monocyanide - Contrasted Semi.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Oceanic Next (SL).tmTheme",
 	"draw_white_space": "all",
 	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
@@ -26,7 +26,8 @@
 		80,
 		120
 	],
-	"theme": "Cyanide.sublime-theme",
+	"tab_size": 2,
+	"theme": "El Capitan.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
