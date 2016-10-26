@@ -6,6 +6,9 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"Anaconda",
+		"Babel",
+		"Babel Snippets",
 		"Behat",
 		"Colorsublime",
 		"DashDoc",
@@ -13,8 +16,8 @@
 		"Doctrine Snippets",
 		"Git",
 		"GitGutter",
-		"GoSublime",
 		"Monokai - Spacegray",
+		"Oceanic Next Color Scheme",
 		"Package Control",
 		"PHP Companion",
 		"PHP-Twig",
@@ -27,6 +30,7 @@
 		"SublimeLinter-contrib-twiglint",
 		"SublimeLinter-phpcs",
 		"Theme - Cyanide",
+		"Theme - El Capitan",
 		"TrailingSpaces"
 	]
 }
