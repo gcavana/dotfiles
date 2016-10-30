@@ -61,7 +61,7 @@ brew install highlight
 
 print_success "Installing NVM Package"
 #nvm
-brew install node
+brew install nvm
 
 print_success "Installing Docker Package"
 #docker
