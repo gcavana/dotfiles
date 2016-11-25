@@ -23,6 +23,7 @@ brew upgrade --all
 
 print_success "Insall utils"
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew install coreutils
 brew install findutils
 brew install bash
 brew install wget
